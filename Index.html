@@ -14,44 +14,45 @@
                 <div class="heart"></div>
             </div>
             <div class="letter" id="letter" style="display: none;">
-                <p>Querida Luz,</p>
-                <p>Este es un pequeño detalle para recordarte lo especial que eres para mí. Gracias por ser mi luz y mi inspiración. Te amo más de lo que las palabras pueden expresar.</p>
+                <p>Querida Luz, este es un pequeño detalle para recordarte lo especial que eres para mí. Gracias por ser mi luz y mi inspiración. Te amo más de lo que las palabras pueden expresar.</p>
                 <p>Con todo mi cariño,<br>Josue</p>
             </div>
-            <img id="paperImage" src="ruta/a/tu/imagen.png" alt="Hoja de papel" style="display: none; width: 300px; margin-top: 20px;">
+            <img id="paperImage" src="ruta/a/tu/imagen.png" srcset="ruta/a/tu/imagen-small.png 500w, ruta/a/tu/imagen-large.png 1000w" alt="Hoja de papel" style="width: 100%; max-width: 300px; margin-top: 20px;">
         </div>
 
-<!-- Actividad 2: Ramo de flores -->
-<div class="activity" id="activity2">
-    <div class="bouquet">
-        <img src="https://goo.su/g6EjNa9" width="150" height="150" alt="Ramo vacío" id="emptyBouquet">
-        <img id="filledBouquet" src="" alt="Ramo lleno" style="display: none; width: 250px;">
-    </div>
-    <div class="flower-options" id="flowerOptions">
-        <select id="flowerType">
-            <option value="roses">Rosas</option>
-            <option value="tulips">Tulipanes</option>
-            <option value="daisies">Margaritas</option>
-        </select>
-        <select id="flowerColor">
-            <option value="white">Blanco</option>
-            <option value="red">Rojo</option>
-            <option value="pink">Rosa</option>
-            <option value="purple">Morado</option>
-        </select>
-        <button onclick="createBouquet()">Crear Ramo</button>
-    </div>
-</div>
-<!-- Actividad 3: Silueta con mensaje -->
-<div class="activity" id="activity3">
-    <div class="silhouette" onclick="showMessage()">
-        <img src="https://images.vexels.com/media/users/3/127498/isolated/preview/99fbe7277e41ffef60484183d329787a-pareja-sentado-en-banco-silueta.png" width="100" height="150" alt="Silueta de dos personas">
-    </div>
-    <div class="message" id="message">
-        <p>Juntos hoy, mañana y siempre mi luz</p>
-    </div>
-</div>
+        <!-- Actividad 2: Ramo de flores -->
+        <div class="activity" id="activity2">
+            <div class="bouquet">
+                <img src="https://goo.su/g6EjNa9" width="150" height="150" alt="Ramo vacío" id="emptyBouquet">
+                <img id="filledBouquet" src="" alt="Ramo lleno" style="display: none; width: 250px;">
+            </div>
+            <div class="flower-options" id="flowerOptions">
+                <select id="flowerType">
+                    <option value="roses">Rosas</option>
+                    <option value="tulips">Tulipanes</option>
+                    <option value="daisies">Margaritas</option>
+                </select>
+                <select id="flowerColor">
+                    <option value="white">Blanco</option>
+                    <option value="red">Rojo</option>
+                    <option value="pink">Rosa</option>
+                    <option value="purple">Morado</option>
+                </select>
+                <button onclick="createBouquet()">Crear Ramo</button>
+            </div>
+        </div>
 
-    <script src="script.js"></script>
+        <!-- Actividad 3: Silueta con mensaje -->
+        <div class="activity" id="activity3">
+            <div class="silhouette" onclick="showMessage()">
+                <img src="https://images.vexels.com/media/users/3/127498/isolated/preview/99fbe7277e41ffef60484183d329787a-pareja-sentado-en-banco-silueta.png" width="100" height="150" alt="Silueta de dos personas">
+            </div>
+            <div class="message" id="message">
+                <p>Juntos hoy, mañana y siempre mi luz</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" async></script>
 </body>
 </html>
