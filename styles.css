@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start; /* Alineación al inicio */
-    height: 100vh;
+    height: auto; /* Cambiado para permitir que el contenido se ajuste */
     overflow: hidden;
 }
 
@@ -25,8 +25,8 @@ body {
 }
 
 .envelope {
-    width: 150px;
-    height: 100px;
+    width: 100px; /* Ajustado para móviles */
+    height: 70px; /* Ajustado para móviles */
     background-color: #ff6666;
     position: relative;
     cursor: pointer;
@@ -39,8 +39,8 @@ body {
 }
 
 .heart {
-    width: 20px;
-    height: 20px;
+    width: 15px; /* Ajustado para móviles */
+    height: 15px; /* Ajustado para móviles */
     background-color: #ff3333;
     position: absolute;
     top: 50%;
@@ -50,39 +50,41 @@ body {
 
 .heart::before, .heart::after {
     content: '';
-    width: 20px;
-    height: 20px;
+    width: 15px; /* Ajustado para móviles */
+    height: 15px; /* Ajustado para móviles */
     background-color: #ff3333;
     border-radius: 50%;
     position: absolute;
 }
 
 .heart::before {
-    top: -10px;
+    top: -7px; /* Ajustado para móviles */
     left: 0;
 }
 
 .heart::after {
     top: 0;
-    left: -10px;
+    left: -7px; /* Ajustado para móviles */
 }
 
 .letter {
     display: none;
     background-color: rgb(249, 0, 224);
-    padding: 20px;
+    padding: 10px; /* Ajustado para móviles */
     border-radius: 10px;
     position: absolute;
-    top: 20%; /* Cambiado para centrar verticalmente */
+    top: 50%; /* Cambiado para centrar verticalmente */
     left: 50%; /* Cambiado para centrar horizontalmente */
     transform: translate(-50%, -50%); /* Centrado perfecto */
     z-index: 1; /* Asegúrate de que esté por encima de otros elementos */
+    max-width: 90%; /* Limitar el ancho para móviles */
+    overflow: auto; /* Permitir desplazamiento si el texto es largo */
 }
 
 #paperImage {
     display: none; /* Inicialmente oculto */
     position: absolute;
-    top: 20%; /* Centrado verticalmente */
+    top: 50%; /* Centrado verticalmente */
     left: 50%; /* Centrado horizontalmente */
     transform: translate(-50%, -50%); /* Centrado perfecto */
     z-index: 1; /* Asegúrate de que esté por encima de otros elementos */
@@ -92,36 +94,29 @@ body {
     position: relative; /* Asegúrate de que el contenedor tenga posición relativa */
     display: flex; /* Usar flexbox para centrar */
     justify-content: center; /* Centrar horizontalmente */
-    margin-bottom: 300px; /* Espacio adicional debajo del ramo */
+    margin-bottom: 20px; /* Espacio adicional debajo del ramo */
 }
 
 #emptyBouquet, #filledBouquet {
-    position: absolute; /* Ambas imágenes deben ser absolutas */
-    top: 0; /* Alineadas en la parte superior del contenedor */
-    left: 50%; /* Alineadas al centro horizontalmente */
-    transform: translateX(-50%); /* Centrar la imagen */
-    width: 250px; /* Asegúrate de que ambas imágenes tengan el mismo ancho */
+    position: relative; /* Cambiado a relativo para evitar superposición */
+    width: 150px; /* Ajustado para móviles */
     height: auto; /* Mantener la proporción de la imagen */
+    margin: 0 auto; /* Centrar la imagen */
 }
 
 /* Estilo para el contenedor de opciones de flores */
 .flower-options {
     text-align: center; /* Centrar el texto de los botones */
-    margin-top: 20px; /* Espaciado entre la imagen y los botones */
-}
-
-.message {
-    margin-top: 1px; /* Aumentar el margen superior para la actividad 3 */
-    text-align: center; /* Centrar el texto del mensaje */
+    margin-top: 10px; /* Espaciado entre la imagen y los botones */
 }
 
 /* Estilo para los selectores */
 select {
-    padding: 10px; /* Espaciado interno */
+    padding: 8px; /* Espaciado interno ajustado */
     margin: 5px; /* Espaciado entre selectores */
     border: 2px solid #ff6666; /* Borde color rosado */
     border-radius: 5px; /* Bordes redondeados */
-    font-size: 16px; /* Tamaño de fuente */
+    font-size: 14px; /* Tamaño de fuente ajustado */
     background-color: #fff; /* Fondo blanco */
     transition: border-color 0.3s; /* Transición suave para el borde */
 }
@@ -134,13 +129,13 @@ select:focus {
 
 /* Estilo para el botón */
 button {
-    padding: 10px 20px; /* Espaciado interno */
+    padding: 8px 16px; /* Espaciado interno ajustado */
     margin: 5px; /* Espaciado entre botones */
     border: none; /* Sin borde */
     border-radius: 5px; /* Bordes redondeados */
     background-color: #ff6666; /* Fondo color rosado */
     color: white; /* Color del texto */
-    font-size: 16px; /* Tamaño de fuente */
+    font-size: 14px; /* Tamaño de fuente ajustado */
     cursor: pointer; /* Cambiar el cursor al pasar el mouse */
     transition: background-color 0.3s; /* Transición suave para el fondo */
 }
@@ -156,9 +151,14 @@ button:hover {
         margin: 10px 0; /* Ajustar márgenes en pantallas pequeñas */
     }
     .envelope {
-        width: 100px; /* Reducir el tamaño del sobre */
+        width: 80px; /* Reducir el tamaño del sobre */
+        height: 60px; /* Reducir el tamaño del sobre */
     }
     .letter {
         padding: 10px; /* Ajustar el padding de la carta */
+        max-width: 90%; /* Limitar el ancho para móviles */
+    }
+    #emptyBouquet {
+        width: 120px; /* Ajustar el tamaño del ramo vacío */
     }
 }
