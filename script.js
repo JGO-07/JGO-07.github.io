@@ -2,6 +2,7 @@ function openEnvelope() {
     document.getElementById('letter').style.display = 'block'; // Muestra la carta
     document.getElementById('paperImage').style.display = 'none'; // Oculta la imagen de la hoja de papel
 }
+
 function createBouquet() {
     // Oculta el ramo vacío
     document.getElementById('emptyBouquet').style.display = 'none';
