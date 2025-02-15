@@ -13,6 +13,7 @@ body {
     height: 100vh;
     overflow: hidden;
 }
+
 .container {
     text-align: center;
     width: 100%; /* Asegúrate de que ocupe todo el ancho */
@@ -87,11 +88,6 @@ body {
     z-index: 1; /* Asegúrate de que esté por encima de otros elementos */
 }
 
-.activity {
-    margin: 20px 0; /* Aumentar el espaciado vertical entre actividades */
-    position: relative;
-}
-
 .bouquet {
     position: relative; /* Asegúrate de que el contenedor tenga posición relativa */
     display: flex; /* Usar flexbox para centrar */
@@ -113,10 +109,12 @@ body {
     text-align: center; /* Centrar el texto de los botones */
     margin-top: 20px; /* Espaciado entre la imagen y los botones */
 }
+
 .message {
     margin-top: 1px; /* Aumentar el margen superior para la actividad 3 */
     text-align: center; /* Centrar el texto del mensaje */
 }
+
 /* Estilo para los selectores */
 select {
     padding: 10px; /* Espaciado interno */
@@ -150,4 +148,17 @@ button {
 /* Cambiar el color del fondo al pasar el mouse */
 button:hover {
     background-color: #ff3366; /* Color de fondo al pasar el mouse */
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 600px) {
+    .activity {
+        margin: 10px 0; /* Ajustar márgenes en pantallas pequeñas */
+    }
+    .envelope {
+        width: 100px; /* Reducir el tamaño del sobre */
+    }
+    .letter {
+        padding: 10px; /* Ajustar el padding de la carta */
+    }
 }
