@@ -1,0 +1,153 @@
+body {
+    background-color: #ffccf2; /* Fondo rosado pastel */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px; /* Espaciado interno para que el contenido no toque el borde */
+    border: 10px solid #ff3366; /* Borde transparente para el efecto */
+    border-image: url('ruta/a/tu/borde-decorativo.png') 30 stretch; /* Borde decorativo con imagen */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alineación al inicio */
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    text-align: center;
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+}
+
+.activity {
+    margin: 5px 0; /* Aumentar el espaciado vertical entre actividades */
+    position: relative;
+}
+
+.envelope {
+    width: 150px;
+    height: 100px;
+    background-color: #ff6666;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 0 auto; /* Centrar el sobre horizontalmente */
+}
+
+.envelope:hover {
+    transform: scale(1.1);
+}
+
+.heart {
+    width: 20px;
+    height: 20px;
+    background-color: #ff3333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.heart::before, .heart::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #ff3333;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: -10px;
+}
+
+.letter {
+    display: none;
+    background-color: rgb(249, 0, 224);
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%; /* Cambiado para centrar verticalmente */
+    left: 50%; /* Cambiado para centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Centrado perfecto */
+    z-index: 1; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+#paperImage {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    top: 20%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Centrado perfecto */
+    z-index: 1; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.activity {
+    margin: 20px 0; /* Aumentar el espaciado vertical entre actividades */
+    position: relative;
+}
+
+.bouquet {
+    position: relative; /* Asegúrate de que el contenedor tenga posición relativa */
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center; /* Centrar horizontalmente */
+    margin-bottom: 300px; /* Espacio adicional debajo del ramo */
+}
+
+#emptyBouquet, #filledBouquet {
+    position: absolute; /* Ambas imágenes deben ser absolutas */
+    top: 0; /* Alineadas en la parte superior del contenedor */
+    left: 50%; /* Alineadas al centro horizontalmente */
+    transform: translateX(-50%); /* Centrar la imagen */
+    width: 250px; /* Asegúrate de que ambas imágenes tengan el mismo ancho */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+/* Estilo para el contenedor de opciones de flores */
+.flower-options {
+    text-align: center; /* Centrar el texto de los botones */
+    margin-top: 20px; /* Espaciado entre la imagen y los botones */
+}
+.message {
+    margin-top: 1px; /* Aumentar el margen superior para la actividad 3 */
+    text-align: center; /* Centrar el texto del mensaje */
+}
+/* Estilo para los selectores */
+select {
+    padding: 10px; /* Espaciado interno */
+    margin: 5px; /* Espaciado entre selectores */
+    border: 2px solid #ff6666; /* Borde color rosado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    background-color: #fff; /* Fondo blanco */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+/* Cambiar el color del borde al enfocar */
+select:focus {
+    border-color: #ff3366; /* Color del borde al enfocar */
+    outline: none; /* Quitar el contorno por defecto */
+}
+
+/* Estilo para el botón */
+button {
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 5px; /* Espaciado entre botones */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ff6666; /* Fondo color rosado */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+/* Cambiar el color del fondo al pasar el mouse */
+button:hover {
+    background-color: #ff3366; /* Color de fondo al pasar el mouse */
+}
